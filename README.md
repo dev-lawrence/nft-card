@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://nft-card.netlify.app/)
+- Live Site URL: [nft-card](https://nft-card.netlify.app/)
 
 ## My process
 
@@ -43,5 +43,5 @@ i learnt how to align item or items vertically.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/dev-lawrence)
-- Twitter - [@yourusername](https://www.twitter.com/lawrence_sticks)
+- Frontend Mentor - [@dev-lawrence](https://www.frontendmentor.io/profile/dev-lawrence)
+- Twitter - [@lawrence_sticks](https://www.twitter.com/lawrence_sticks)
