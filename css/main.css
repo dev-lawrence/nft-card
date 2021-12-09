@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+@font-face {
+  font-family: "Flaticon";
+  src: url();
+}
+
 *,
 *::before,
 ::after {
@@ -156,6 +161,7 @@ span {
 
 @media (min-width: 768px) {
   .container {
+    margin-top: 1rem;
     width: 85%;
     max-width: 450px;
   }
