@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+@font-face {
+  font-family: "Flaticon";
+  src: url();
+}
+
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//FONT FAMILY
+$font-family: "Outfit", sans-serif;
+
+//PRIMARY COLORS
+$Softblue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+
+//NEUTTAL COLORS
+$Verydark-blue-mainBg: hsl(217, 54%, 11%);
+$Verydark-blue-card: hsl(216, 50%, 16%);
+$Verydark-blue-line: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+
+body {
+  font-family: $font-family;
+  line-height: 1.5;
+  background-color: $Verydark-blue-mainBg;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 95%;
+  margin: 50% auto;
+  max-width: 500px;
+}
+
+.card {
+  background-color: $Verydark-blue-card;
+  padding: 1.5rem;
+  border-radius: 1rem;
+
+  .equ {
+    border-radius: 1rem;
+  }
+
+  .card-img {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 1rem;
+      background-color: $Cyan;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover:before {
+      opacity: 0.5;
+    }
+  }
+
+  .view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+
+  .card-img:hover .view {
+    opacity: 1;
+  }
+}
+
+.card-content,
+.creation {
+  a {
+    color: $White;
+    margin: 1.5rem 0 1rem;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $Cyan;
+    }
+  }
+}
+
+.card-content {
+  border-bottom: 1px solid $Verydark-blue-line;
+  p {
+    font-size: 1.125rem;
+    line-height: 1.2;
+    color: $Softblue;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 01rem;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    margin-left: 0.5rem;
+  }
+
+  .eth {
+    color: $Cyan;
+  }
+
+  .days {
+    color: $Softblue;
+    font-weight: 300;
+  }
+}
+
+.creation {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $White;
+    border-radius: 50%;
+  }
+
+  .c {
+    color: $Softblue;
+    font-size: 1.125rem;
+    margin-top: -0.4rem;
+
+    margin-left: 1rem;
+  }
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 376px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 85%;
+    max-width: 450px;
+  }
+}

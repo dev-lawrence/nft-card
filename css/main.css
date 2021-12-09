@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  background-color: #0d192b;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 95%;
+  margin: 50% auto;
+  max-width: 500px;
+}
+
+.card {
+  background-color: #14253d;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.card .equ {
+  border-radius: 1rem;
+}
+
+.card .card-img {
+  position: relative;
+  cursor: pointer;
+}
+
+.card .card-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: #00fff7;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card .card-img:hover:before {
+  opacity: 0.5;
+}
+
+.card .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.card .card-img:hover .view {
+  opacity: 1;
+}
+
+.card-content a,
+.creation a {
+  color: white;
+  margin: 1.5rem 0 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.card-content a:hover,
+.creation a:hover {
+  color: #00fff7;
+}
+
+.card-content {
+  border-bottom: 1px solid #2f415b;
+}
+
+.card-content p {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: #8bacda;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.card-content .flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 01rem;
+}
+
+.card-content .inner {
+  display: flex;
+  align-items: center;
+}
+
+.card-content span {
+  margin-left: 0.5rem;
+}
+
+.card-content .eth {
+  color: #00fff7;
+}
+
+.card-content .days {
+  color: #8bacda;
+  font-weight: 300;
+}
+
+.creation {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.creation img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.creation .c {
+  color: #8bacda;
+  font-size: 1.125rem;
+  margin-top: -0.4rem;
+  margin-left: 1rem;
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 376px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 85%;
+    max-width: 450px;
+  }
+}
